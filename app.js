@@ -61,12 +61,34 @@ function sumArray(arr) {
 // 6.1 checkPrime
 function checkPrime(num) {
     // YOUR CODE HERE
+    let prime = true; // can only be divisible by 1 and itself
+    if(num > 1){
+        for(let i= 2; i < num; i++){// checking if the number is divisible by a number from 2 - num^2
+            if(num % i === 0){
+                prime = false;
+                break;
+            }
+        }
+    } else if(num === 1)
+    {
+        prime = false;
+    }
+    return prime;
 }
+// console.log(checkPrime(29));
 
 // 6.2 printPrimes
 function printPrimes(num) {
     // YOUR CODE HERE
+    primes = [];
+    for(let i=1;i <= num; i++){// for loop to check every value up to "num" prime numbers
+        if(checkPrime(i) === true){// if prime === true then push into array
+            primes.push(i);// push every prime number into array;
+        }
+    }
+    console.log(primes);
 }
+// printPrimes(97);
 
 // 7. printLongestWord
 function printLongestWord(arr) {
