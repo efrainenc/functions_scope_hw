@@ -48,7 +48,15 @@ function getTwoLengths(word1, word2) {
 // 5. sumArray
 function sumArray(arr) {
     // YOUR CODE HERE
+    let sum=0;// value to store the sum
+
+    // for loop to iterate and add each variable in array
+    for(let i=0; i<arr.length; i++){
+        sum += arr[i];
+    }
+    return sum;
 }
+// console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // 6.1 checkPrime
 function checkPrime(num) {
