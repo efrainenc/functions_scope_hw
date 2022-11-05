@@ -27,7 +27,13 @@ function calculateCube(num) {
 // 3. isAVowel
 function isAVowel(letter) {
     // YOUR CODE HERE
+    if(letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u"){// if vowel return true; else false
+        return true;
+    }else{
+        return false;
+    }
 }
+// console.log(isAVowel("a"));
 
 // 4. getTwoLengths
 function getTwoLengths(word1, word2) {
